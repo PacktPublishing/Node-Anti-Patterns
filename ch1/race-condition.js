@@ -1,4 +1,4 @@
-import { writeFile, stat, unlink } from 'node:fs/promises'
+import { writeFile, unlink } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
