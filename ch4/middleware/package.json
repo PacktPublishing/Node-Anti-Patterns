@@ -1,0 +1,26 @@
+{
+    "name": "middleware",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.mjs",
+    "scripts": {
+        "start": "node src/server.mjs",
+        "start:cached": "node src/serverCached.mjs",
+        "benchmark": "autocannon -d 30 http://localhost:3000/signed"
+    },
+    "engines": {
+        "node": ">=22"
+    },
+    "keywords": [],
+    "author": "Lucas Santos <hello@lsantos.dev> (https://lsantos.dev/)",
+    "license": "GPL-3.0",
+    "type": "commonjs",
+    "dependencies": {
+        "express": "^4.21.2",
+        "node-jose": "^2.2.0"
+    },
+    "devDependencies": {
+        "autocannon": "^8.0.0"
+    },
+    "packageManager": "npm@11.1.0"
+}
