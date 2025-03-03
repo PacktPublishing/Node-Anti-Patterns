@@ -51,6 +51,7 @@ function getFnLookupString(level) {
     return lookup[level] || f5
 }
 
+const levels = ["info", "warn", "error", "fatal"];
 const lookupN = {
     '1': f1,
     '2': f2,
@@ -60,6 +61,10 @@ const lookupN = {
 
 function getFnLookupN(level) {
     return lookupN[level] || f5
+}
+
+function getFnLookupNStr(level) {
+    return lookupN[levels[level - 1]] || f5
 }
 
 const arr = [f1, f2, f3, f4, f5]
@@ -107,6 +112,16 @@ const lookupNum = performance.timerify(function numberLookup() {
     }
 })
 
+const lookupNumStr = performance.timerify(function numberStrLookup() {
+    for (let i = 0; i < 1000; i++) {
+        getFnLookupNStr(1)
+        getFnLookupNStr(2)
+        getFnLookupNStr(3)
+        getFnLookupNStr(4)
+        getFnLookupNStr()
+    }
+})
+
 const lookupArr = performance.timerify(function arrlookup() {
     for (let i = 0; i < 1000; i++) {
         getFnLookupA(0)
@@ -121,4 +136,5 @@ iffn()
 switchfn()
 lookupSt()
 lookupNum()
+lookupNumStr()
 lookupArr()
