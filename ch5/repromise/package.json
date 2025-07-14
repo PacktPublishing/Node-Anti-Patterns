@@ -1,0 +1,12 @@
+{
+    "name": "repromise",
+    "version": "0.0.1",
+    "main": "index.js",
+    "scripts": {
+        "clinic": "npx clinic doctor -- node repromise.js"
+    },
+    "keywords": [],
+    "author": "Lucas Santos <hello@lsantos.dev> (https://lsantos.dev/)",
+    "license": "GPL-3.0",
+    "description": ""
+}

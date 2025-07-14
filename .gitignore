@@ -1,3 +1,4 @@
 node_modules/
 draft/
 .DS_Store
+.clinic/
